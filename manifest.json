@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Gitlab Submodule Tags",
+  "version": "1.0",
+
+  "description": "Replaces commit hashes with tags if they match one",
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.gitlab.com/*"],
+      "js": ["submodule-tags.js"]
+    }
+  ],
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pstephan@mediaire.de"
+    }
+  }
+}
