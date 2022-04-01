@@ -26,7 +26,6 @@ waitForElement('.tree-item').then((elm) => {
     const commitShortId = link.text;
     const thisLink = link;
 
-    // TODO maybe it's possible to find the associated branch as well?
     fetch(`https://gitlab.com/api/v4/projects/${encodeURIComponent(projectId)}/repository/tags?per_page=100`)
       .then(response => response.json()).then(tags => {
         try {
