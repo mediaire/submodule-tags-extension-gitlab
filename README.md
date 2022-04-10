@@ -1,11 +1,16 @@
 # Gitlab Submodule Tags Browser Extension
 Show target tag names instead of commit hashes for submodules in Gitlab.
 
+[![Get the Firefox Addon](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png)](https://addons.mozilla.org/en-US/firefox/addon/gitlab-submodule-tags/)
+
+![screenshot](img/screenshot.png)
+
+
 ## Development
 Load the extension via `about:debugging` as described
 [here][mozilla_first_extension].
 
-## Installation
+### Installation
 _Unfortunately this [does not work][mozilla_addon_signing] in the branded
 Release versions of Firefox._
 
@@ -21,7 +26,7 @@ Release versions of Firefox._
   the latest 100 commits)
 - If possible, find the associated branch name as well
 - Icon
-- Publish so it can be installed without a hassle
+- Publish chrome version
 
 
 [mozilla_first_extension]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#trying_it_out

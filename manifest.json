@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "name": "Gitlab Submodule Tags",
-  "version": "1.0",
+  "version": "0.1.0",
 
-  "description": "Replaces commit hashes with tags if they match one",
+  "description": "Replaces submodule commit hashes on Gitlab with tags if they match one",
 
   "content_scripts": [
     {
