@@ -3,7 +3,8 @@
 # Gitlab Submodule Tags Browser Extension
 Show target tag names instead of commit hashes for submodules in Gitlab.
 
-[![Get the Firefox Addon](https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-178x60px.dad84b42.png)](https://addons.mozilla.org/en-US/firefox/addon/gitlab-submodule-tags/)
+[![Get the Firefox Addon](img/firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/gitlab-submodule-tags/)
+[![Get the Chrome Extension](img/chrome.png)](https://chrome.google.com/webstore/detail/kdfnokabklbbpbmccoociofpgcjkfbca/)
 
 ![screenshot](img/screenshot.png)
 
@@ -32,7 +33,7 @@ The icon is composed of the Gitlab [file type icon][gitlab_icon_filetype]
   the latest 100 commits)
 - If possible, find the associated branch name as well
 - diff views
-- Port to manifest v3
+- change firefox addon ID to `gitlab-submodule-tags@mediaire.de`
 
 
 [mozilla_first_extension]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#trying_it_out
