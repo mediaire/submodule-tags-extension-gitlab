@@ -53,3 +53,19 @@ waitForElement('.tree-item').then(elm => {
     });
   }
 });
+
+// in MR diff viewer
+waitForElement('.diff-files-holder').then(elm => {
+  // changed file header
+  for (title of document.getElementsByClassName('file-header-content')) {
+    const link = title.getElementsByTagName('a')[0];
+    const projectId = getProjectIdFromUrl(link.href);
+    const fileName = link.getElementsByClassName('file-title-name')[0];
+    const commitShortId = fileName.innerText.trim().match(/[0-9a-f]{8}$/)[0]
+    if (commitShortId !== null) {
+      getTagForCommit(projectId, commitShortId).then(tag => {
+        fileName.innerText = fileName.innerText.replace(commitShortId, tag);
+      });
+    }
+  }
+});
