@@ -7,6 +7,7 @@ Show target tag names instead of commit hashes for submodules in Gitlab.
 [![Get the Chrome Extension](img/chrome.png)](https://chrome.google.com/webstore/detail/kdfnokabklbbpbmccoociofpgcjkfbca/)
 
 ![screenshot](img/screenshot.png)
+![screenshot-diff](img/screenshot-diff.png)
 
 
 ## Development
@@ -18,10 +19,12 @@ _Unfortunately this [does not work][mozilla_addon_signing] in the branded
 Release versions of Firefox._
 
 1. Turn off signature verification for extensino installs (and be aware of the
-   associated risks): in `about:config` set `xpinstall.signatures.requred` to
+   associated risks): in `about:config` set `xpinstall.signatures.required` to
    `false`.
 2. Create a packaged extension `gitlab-submodules-tags-extension.zip` using
-   `make extension`.
+   ```bash
+   make extension
+   ```
 3. Drag the ZIP file into `about:addons`
 
 ## Icon
@@ -32,8 +35,9 @@ The icon is composed of the Gitlab [file type icon][gitlab_icon_filetype]
 - Gitlab API pagingation (currently only works if the checked out commit is in
   the latest 100 commits)
 - If possible, find the associated branch name as well
-- diff views
-- change firefox addon ID to `gitlab-submodule-tags@mediaire.de`
+- Properly wait for elements to be rendered (hook Vue?)
+- change firefox addon ID to `gitlab-submodule-tags@mediaire.de` (delete and
+  re-add the addon, ID cannot be changed)
 
 
 [mozilla_first_extension]: https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension#trying_it_out
